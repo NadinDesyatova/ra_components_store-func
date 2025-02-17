@@ -1,49 +1,7 @@
-import './App.css'
+import './App.css';
+import ShopItemFunc from './components/shop-item-func/ShopItemFunc';
+import Item from './components/shop-item-func/item'
 
-
-class Item {
-  constructor(
-    brand, 
-    title, 
-    description, 
-    descriptionFull, 
-    price, 
-    currency
-  ) {
-    this.brand = brand; 
-    this.title = title; 
-    this.description = description; 
-    this.descriptionFull = descriptionFull; 
-    this.price = price; 
-    this.currency = currency;
-  }
-}
-
-function ShopItemFunc({item}) {
-  const {
-    brand, 
-    title, 
-    description, 
-    descriptionFull, 
-    price, 
-    currency
-  } = item;
-
-  return (
-    <div class="main-content">
-      <h2>{brand}</h2>
-      <h1>{title}</h1>
-      <h3>{description}</h3>
-      <div class="description">{descriptionFull}</div>
-      <div class="highlight-window mobile"><div class="highlight-overlay"></div></div>
-      <div class="divider"></div>
-      <div class="purchase-info">
-        <div class="price">{currency}{price.toFixed(2)}</div>
-        <button>Добавить в корзину</button>
-      </div>
-    </div>
-  )
-}
 
 const item = new Item(
   'Tiger of Sweden',
@@ -52,7 +10,7 @@ const item = new Item(
   'Men\'s minimalistic overcoat in cotton-blend. Features a stand-up collar, concealed front closure and single back vent. Slim fit with clean, straight shape. Above-knee length.',
   399,
   '£'
-)
+);
 
 function App() {
   return (
@@ -69,4 +27,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
